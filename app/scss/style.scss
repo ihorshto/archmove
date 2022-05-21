@@ -4,7 +4,192 @@
 @import 'libs';
 @import 'global';
 
+.header {
+ padding: 26px 0;
+ margin-bottom: 50px;
+
+ &__inner {
+  display: flex;
+  align-items: center;
+ }
+}
+
+.menu {
+ &__list {
+  display: flex;
+  margin-left: 60px;
+ }
+
+ &__list-item+.menu__list-item {
+  margin-left: 48px;
+ }
+
+ &__list-link {
+  font-size: 14px;
+  line-height: 40px;
+  color: $gray;
+ }
+}
+
+.user-nav {
+ display: flex;
+ align-items: center;
+ margin-left: auto;
+
+ &__link-signin,
+ &__link-signup {
+  font-size: 14px;
+  line-height: 40px;
+  color: $gray;
+  padding: 4px 24px;
+  border-radius: 4px;
+ }
+
+ &__link-signup {
+  background-color: $red;
+  color: #fff;
+  margin-left: 16px;
+ }
+
+ &__link-signin {
+  margin-left: 24px;
+ }
+}
+
+.header-content {
+ margin-bottom: 50px;
+
+ &__box {
+  display: flex;
+ }
+
+ &__text-box {
+  flex-basis: 290px;
+  margin-right: 55px;
+ }
+
+ &__text {
+  margin-bottom: 50px;
+ }
+}
+
+.title {
+ font-size: 120px;
+ line-height: 120px;
+ max-width: 870px;
+ letter-spacing: -0.04em;
+ @extend %new-york-700;
+ margin-bottom: 50px;
+
+ span {
+  color: $red;
+ }
+}
+
+.slider {
+ padding: 65px 0;
+
+ &__img {
+  width: 305px !important;
+  height: 432px;
+ }
+
+ .slick-slide {
+  display: flex;
+  justify-content: center;
+ }
+
+ .slick-prev,
+ .slick-next {
+  position: absolute;
+  top: -95px;
+  right: 32px;
+  border: none;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  path {
+   fill: #FD665E;
+  }
+ }
+
+ .slick-prev {
+  right: 88px;
+ }
+}
+
+.slick-disabled {
+ background-color: transparent;
+
+ path {
+  fill: #473534;
+ }
+}
+
+.title.slider__title {
+ font-size: 48px;
+ line-height: 60px;
+ letter-spacing: -0.04em;
+ max-width: 535px;
+ margin: 0 auto;
+ margin-bottom: 40px;
+}
+
+.advantages {
+ padding: 65px 0;
+
+ &__title {
+  font-size: 48px;
+  line-height: 60px;
+  max-width: 460px;
+  margin-bottom: 40px;
+ }
+
+ &__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ &__content {
+  text-align: center;
+  flex-basis: 390px;
+
+ }
+
+ &__content-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  margin-bottom: 48px;
+
+  &:last-child {
+   margin-bottom: 70px;
+  }
+
+  &__content-title {
+   @extend %sf-700;
+   margin-bottom: 8px;
+  }
+ }
+
+ &__content-box {
+  flex-basis: 305px;
+  margin-left: 40px;
+ }
+
+ &__content-box--guranty {
+  margin-left: 37px;
+ }
+}
+
 
 
 @import 'media';
-

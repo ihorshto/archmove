@@ -15,6 +15,12 @@
 }
 
 .menu {
+
+ &__btn {
+  display: none;
+  z-index: 100;
+ }
+
  &__list {
   display: flex;
   margin-left: 60px;
@@ -28,6 +34,15 @@
   font-size: 14px;
   line-height: 40px;
   color: $gray;
+  transition: all .3s;
+
+  &:hover {
+   color: $red;
+  }
+ }
+
+ .user-nav__link--search {
+  display: none;
  }
 }
 
@@ -49,6 +64,11 @@
   background-color: $red;
   color: #fff;
   margin-left: 16px;
+  transition: all .3s;
+
+  &:hover {
+   background-color: #f5433a;
+  }
  }
 
  &__link-signin {
@@ -94,6 +114,17 @@
   height: 432px;
  }
 
+ &__title {
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -0.04em;
+  max-width: 535px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  letter-spacing: -0.04em;
+  @extend %new-york-700;
+ }
+
  .slick-slide {
   display: flex;
   justify-content: center;
@@ -109,6 +140,7 @@
   border-radius: 4px;
   height: 48px;
   width: 48px;
+  z-index: 20;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -124,21 +156,12 @@
  }
 }
 
-.slick-disabled {
+.slick-arrow.slick-disabled {
  background-color: transparent;
 
  path {
   fill: #473534;
  }
-}
-
-.title.slider__title {
- font-size: 48px;
- line-height: 60px;
- letter-spacing: -0.04em;
- max-width: 535px;
- margin: 0 auto;
- margin-bottom: 40px;
 }
 
 .advantages {
@@ -149,12 +172,18 @@
   line-height: 60px;
   max-width: 460px;
   margin-bottom: 40px;
+  letter-spacing: -0.04em;
+  @extend %new-york-700;
  }
 
  &__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+ }
+
+ &__img {
+  object-fit: cover;
  }
 
  &__content {
@@ -188,8 +217,165 @@
  &__content-box--guranty {
   margin-left: 37px;
  }
+
+ .consultation__link {
+  text-transform: uppercase;
+ }
 }
 
+.blockquote {
+ padding: 65px 0 75px;
+ background: linear-gradient(360deg, #F9F9F9 60%, rgba(249, 249, 249, 0) 100%);
 
+ &__title {
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -0.04em;
+  @extend %new-york-700;
+  max-width: 375px;
+  margin-bottom: 40px;
+ }
+
+ &__slider {
+  position: relative;
+  margin-left: auto;
+  max-width: 765px;
+
+  &::before {
+   content: "";
+   position: absolute;
+   background-image: url('../images/icons/quotes-svg.svg');
+   background-repeat: no-repeat;
+   width: 59px;
+   height: 41px;
+   top: 0;
+   left: -110px;
+  }
+ }
+
+ &__slide-text {
+  font-size: 32px;
+  line-height: 51px;
+  @extend %sf-300;
+ }
+
+ &__slide-author {
+  margin-top: 60px;
+  display: inline-block;
+ }
+
+ &__name {
+  @extend %sf-700;
+ }
+
+ .slick-prev,
+ .slick-next {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+  border: none;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  bottom: -12px;
+  right: 0;
+  z-index: 20;
+
+  path {
+   fill: #FD665E;
+  }
+ }
+
+ .slick-prev {
+  right: 56px;
+ }
+
+ .slick-arrow.slick-disabled {
+  background-color: transparent;
+
+  path {
+   fill: #473534;
+  }
+ }
+}
+
+.realisation {
+ padding: 90px 0 65px;
+ background: linear-gradient(180deg, #F9F9F9 22.12%, rgba(249, 249, 249, 0) 100%);
+
+ &__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+ }
+
+ &__wrapper {
+  max-width: 520px;
+  width: 100%;
+ }
+
+ &__title {
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -0.04em;
+  @extend %new-york-700;
+  margin-bottom: 65px;
+ }
+
+ .consultation__link {
+  text-transform: uppercase;
+ }
+}
+
+.partners {
+ padding: 65px 0;
+
+ &__title {
+  font-size: 48px;
+  line-height: 60px;
+  margin-bottom: 40px;
+ }
+
+ &__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+ }
+}
+
+.footer {
+ padding: 90px 0;
+ border-top: 1px solid #f0f0f0;
+
+ &__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ &__list {
+  display: flex;
+ }
+
+ &__list-item+.footer__list-item {
+  margin-left: 48px;
+ }
+
+ &__list-link {
+  font-size: 12px;
+  line-height: 40px;
+  color: #585858;
+  @extend %sf-600;
+  transition: all .3s;
+
+  &:hover {
+   color: $red;
+  }
+ }
+}
 
 @import 'media';

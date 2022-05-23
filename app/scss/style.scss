@@ -8,7 +8,22 @@
  padding: 26px 0;
  margin-bottom: 50px;
 
- &__inner {
+ &__top {
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 20;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  z-index: 100;
+ }
+
+ &__top-inner {
   display: flex;
   align-items: center;
  }
@@ -107,7 +122,7 @@
 }
 
 .slider {
- padding: 65px 0;
+ padding: 75px 0;
 
  &__img {
   width: 305px !important;
@@ -165,7 +180,7 @@
 }
 
 .advantages {
- padding: 65px 0;
+ padding: 75px 0;
 
  &__title {
   font-size: 48px;
